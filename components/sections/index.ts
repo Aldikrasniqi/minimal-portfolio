@@ -1,0 +1,5 @@
+export { Section } from './Section'
+export { HeroSection } from './HeroSection'
+export { ProjectsSection } from './ProjectsSection'
+export { AlmostSection } from './AlmostSection'
+export { ContactSection } from './ContactSection'
