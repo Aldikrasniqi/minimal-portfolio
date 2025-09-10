@@ -4,26 +4,37 @@ import {
 	AlmostSection,
 	ContactSection,
 } from '@/components/sections'
-import { PROJECTS, ALMOST_WORK } from '@/lib/constants'
+import { PROJECTS, ALMOST_WORK, SOCIAL_LINKS } from '@/lib/constants'
 
 export default function Home() {
 	return (
 		<main className="font-sans" role="main">
 			<HeroSection />
 
-			<ProjectsSection title="Selected work" year="18,25" projects={PROJECTS} />
+			<section aria-labelledby="projects-heading">
+				<ProjectsSection
+					title="Selected work"
+					year="18,25"
+					projects={PROJECTS}
+				/>
+			</section>
 
-			<AlmostSection
-				title="What I’ve Almost Built"
-				description="A collection of experiments and other almost work that didn’t make it into the main section"
-				almostWork={ALMOST_WORK}
-				year="18,25"
-			/>
+			<section aria-labelledby="almost-heading">
+				<AlmostSection
+					title="What I've Almost Built"
+					description="A collection of experiments and other almost work that didn't make it into the main section"
+					almostWork={ALMOST_WORK}
+					year="18,25"
+				/>
+			</section>
 
-			<ContactSection
-				title="Let's Connect"
-				description="Ready to collaborate or discuss opportunities? I'd love to hear from you."
-			/>
+			<section aria-labelledby="contact-heading">
+				<ContactSection
+					email="daniel.kim@gmail.com"
+					title="Available for collaborations and experiments."
+					socialLinks={SOCIAL_LINKS}
+				/>
+			</section>
 		</main>
 	)
 }

@@ -1,13 +1,17 @@
 export const SITE_CONFIG = {
-	name: 'Your Portfolio',
-	title: 'Professional Portfolio | Your Name',
-	description: 'Showcasing innovative projects and development expertise',
-	url: 'https://yourportfolio.com',
+	name: 'Daniel Kim',
+	title: 'Daniel Kim - Software Engineer | Backend & Infrastructure',
+	description:
+		'Korean American software engineer leading backend and infrastructure teams at TechNova Solutions. Building scalable systems for Netflix, Shopify, Stripe & Microsoft.',
+	url: 'https://danielkim.dev',
+	ogImage: '/og-image.jpg',
+	twitterHandle: '@danielkim_dev',
 	author: {
-		name: 'Your Name',
-		email: 'your.email@example.com',
-		github: 'https://github.com/yourusername',
-		linkedin: 'https://linkedin.com/in/yourusername',
+		name: 'Daniel Kim',
+		email: 'daniel.kim@gmail.com',
+		github: 'https://github.com/danielkim',
+		linkedin: 'https://linkedin.com/in/danielkim-dev',
+		twitter: 'https://twitter.com/danielkim_dev',
 	},
 } as const
 
@@ -147,3 +151,28 @@ export const ALMOST_WORK = [
 		isFullSize: true,
 	},
 ]
+
+export const SOCIAL_LINKS = [
+	{
+		name: 'LinkedIn',
+		url: 'https://linkedin.com/in/yourprofile',
+		label: 'Connect on LinkedIn',
+		colorClass: 'text-[#0077B5]',
+		hoverColorClass: 'hover:text-[#005885]',
+	},
+	{
+		name: 'Instagram',
+		url: 'https://instagram.com/yourprofile',
+		label: 'Follow on Instagram',
+		colorClass:
+			'text-transparent bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] bg-clip-text',
+		hoverColorClass: 'hover:opacity-80',
+	},
+	{
+		name: 'X / Twitter',
+		url: 'https://twitter.com/yourprofile',
+		label: 'Follow on X/Twitter',
+		colorClass: 'text-[#1DA1F2]',
+		hoverColorClass: 'hover:text-[#0d8bd9]',
+	},
+] as const

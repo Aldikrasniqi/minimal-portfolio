@@ -44,6 +44,23 @@ const nextConfig: NextConfig = {
 						key: 'Referrer-Policy',
 						value: 'origin-when-cross-origin',
 					},
+					{
+						key: 'X-DNS-Prefetch-Control',
+						value: 'on',
+					},
+					{
+						key: 'Permissions-Policy',
+						value: 'camera=(), microphone=(), geolocation=()',
+					},
+				],
+			},
+			{
+				source: '/images/(.*)',
+				headers: [
+					{
+						key: 'Cache-Control',
+						value: 'public, max-age=31536000, immutable',
+					},
 				],
 			},
 		]

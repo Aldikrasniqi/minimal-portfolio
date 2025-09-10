@@ -31,9 +31,18 @@ export interface ProjectsSectionProps {
 	readonly projects: Project[]
 }
 
+export interface SocialLink {
+	readonly name: string
+	readonly url: string
+	readonly label: string
+	readonly colorClass: string
+	readonly hoverColorClass: string
+}
+
 export interface ContactSectionProps {
 	readonly title: string
-	readonly description: string
+	readonly email: string
+	readonly socialLinks?: readonly SocialLink[]
 }
 
 export interface AlmostSectionProps {
