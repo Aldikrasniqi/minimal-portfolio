@@ -6,11 +6,11 @@ export function AlmostWorkCard({ almostWork }: { almostWork: AlmostWork }) {
 		<>
 			{almostWork.isFullSize ? (
 				<article
-					className="col-span-full flex flex-col gap-4"
+					className="col-span-full flex flex-col gap-4 sm:gap-6"
 					itemScope
 					itemType="https://schema.org/CreativeWork"
 				>
-					<div className="w-full h-[510px] rounded-[80px] overflow-hidden">
+					<div className="w-full h-[300px] sm:h-[400px] md:h-[510px] rounded-[40px] sm:rounded-[60px] md:rounded-[80px] overflow-hidden">
 						<Image
 							src={almostWork.image}
 							alt={`${almostWork.title} - Experimental project showcase demonstrating creative development and design exploration`}
@@ -23,7 +23,10 @@ export function AlmostWorkCard({ almostWork }: { almostWork: AlmostWork }) {
 							itemProp="image"
 						/>
 					</div>
-					<h3 className="text-center text-2xl font-medium" itemProp="name">
+					<h3
+						className="text-center text-lg sm:text-xl md:text-2xl font-medium"
+						itemProp="name"
+					>
 						{almostWork.title}
 					</h3>
 					<meta itemProp="author" content="Daniel Kim" />
@@ -31,11 +34,11 @@ export function AlmostWorkCard({ almostWork }: { almostWork: AlmostWork }) {
 				</article>
 			) : (
 				<article
-					className="flex flex-col gap-4"
+					className="flex flex-col gap-4 sm:gap-6"
 					itemScope
 					itemType="https://schema.org/CreativeWork"
 				>
-					<div className="w-full aspect-square rounded-[80px] overflow-hidden">
+					<div className="w-full aspect-square rounded-[40px] sm:rounded-[60px] md:rounded-[80px] overflow-hidden">
 						<Image
 							src={almostWork.image}
 							alt={`${almostWork.title} - Experimental project exploring innovative concepts and design patterns`}
@@ -48,7 +51,10 @@ export function AlmostWorkCard({ almostWork }: { almostWork: AlmostWork }) {
 							itemProp="image"
 						/>
 					</div>
-					<h3 className="text-center text-xl font-medium" itemProp="name">
+					<h3
+						className="text-center text-base sm:text-lg md:text-xl font-medium"
+						itemProp="name"
+					>
 						{almostWork.title}
 					</h3>
 					<meta itemProp="author" content="Daniel Kim" />

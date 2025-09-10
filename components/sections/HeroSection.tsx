@@ -4,15 +4,15 @@ import { Fragment } from 'react'
 
 export function HeroSection() {
 	return (
-		<Section id={SECTION_IDS.HOME}>
+		<Section id={SECTION_IDS.HOME} className="flex items-center">
 			<div
 				itemScope
 				itemType="https://schema.org/Person"
-				className="space-y-4 px-4 py-8 md:py-16 lg:py-24 xl:absolute xl:right-20 xl:top-50 xl:w-1/2 xl:mx-0"
+				className="space-y-6 sm:space-y-8 w-full xl:absolute xl:right-20 xl:top-1/2 xl:-translate-y-1/2 xl:w-1/2"
 			>
 				<h1
 					id={`${SECTION_IDS.HOME}-heading`}
-					className="text-2xl sm:text-3xl text-left font-light leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000"
+					className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-left font-light leading-relaxed sm:leading-relaxed md:leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000"
 					role="banner"
 					aria-label="Daniel Kim - Software Engineer Introduction"
 				>
