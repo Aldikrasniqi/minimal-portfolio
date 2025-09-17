@@ -1,5 +1,7 @@
 # Minimal Portfolio
 
+![Minimal Portfolio Screenshot](image.png)
+
 A clean, performance-focused portfolio built with Next.js and Tailwind CSS that prioritizes substance over complexity.
 
 ## Why Minimal Matters
