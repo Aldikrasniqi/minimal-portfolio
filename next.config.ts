@@ -23,10 +23,6 @@ const nextConfig: NextConfig = {
 
 	poweredByHeader: false,
 
-	// bundleAnalyzer: {
-	//   enabled: process.env.ANALYZE === 'true',
-	// },
-
 	async headers() {
 		return [
 			{

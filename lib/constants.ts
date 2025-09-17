@@ -78,19 +78,19 @@ export const PROJECTS = [
 		imageGallery: [
 			{
 				id: '1',
-				image: '/images/projects/airbnb/1.png',
+				image: '/images/projects/airbnb/template.jpg',
 			},
 			{
 				id: '2',
-				image: '/images/projects/airbnb/2.png',
+				image: '/images/projects/airbnb/template.jpg',
 			},
 			{
 				id: '3',
-				image: '/images/projects/airbnb/3.png',
+				image: '/images/projects/airbnb/template.jpg',
 			},
 			{
 				id: '4',
-				image: '/images/projects/airbnb/4.png',
+				image: '/images/projects/airbnb/template.jpg',
 			},
 		],
 		overview: '',
@@ -106,19 +106,19 @@ export const PROJECTS = [
 		imageGallery: [
 			{
 				id: '1',
-				image: '/images/projects/uber/1.png',
+				image: '/images/projects/uber/template.jpg',
 			},
 			{
 				id: '2',
-				image: '/images/projects/uber/2.png',
+				image: '/images/projects/uber/template.jpg',
 			},
 			{
 				id: '3',
-				image: '/images/projects/uber/3.png',
+				image: '/images/projects/uber/template.jpg',
 			},
 			{
 				id: '4',
-				image: '/images/projects/uber/4.png',
+				image: '/images/projects/uber/template.jpg',
 			},
 		],
 		overview: '',

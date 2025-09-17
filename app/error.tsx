@@ -8,13 +8,8 @@ interface ErrorPageProps {
 	reset: () => void
 }
 
-/**
- * Error page component for Next.js app router
- * Handles and displays application errors with recovery options
- */
 export default function Error({ error, reset }: ErrorPageProps) {
 	useEffect(() => {
-		// Log the error to an error reporting service
 		console.error('Application error:', error)
 	}, [error])
 

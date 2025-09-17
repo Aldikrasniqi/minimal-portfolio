@@ -1,272 +1,170 @@
-# 🚀 Minimal Portfolio
+# Minimal Portfolio
 
-A modern, performant portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. Features a clean, minimalist design with smooth animations and excellent accessibility.
+A clean, performance-focused portfolio built with Next.js and Tailwind CSS that prioritizes substance over complexity.
 
-## ✨ Features
+## Why Minimal Matters
 
-- **Modern Stack**: Next.js 15 with App Router, TypeScript, Tailwind CSS
-- **Performance Optimized**: Turbopack, image optimization, font optimization
-- **Accessibility First**: WCAG compliant with proper ARIA labels and semantic HTML
-- **Responsive Design**: Mobile-first approach with smooth animations
-- **Dynamic Layouts**: Flexible grid system with full-width showcase items
-- **Type Safe**: Full TypeScript implementation with proper type definitions
-- **Clean Architecture**: Modular components following clean code principles
-- **Error Handling**: Comprehensive error boundaries and loading states
-- **SEO Optimized**: Proper metadata, Open Graph, and Twitter Cards
-- **Portfolio Sections**: Hero, Projects, Almost Work showcase, and Contact
+In a world of over-engineered websites and flashy animations, this portfolio takes a different approach. It's built on the principle that **your work should speak louder than your website**.
 
-## 🛠️ Tech Stack
+### The Philosophy
 
-- **Framework**: Next.js 15.5.2 with App Router
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS v4 with custom design system
-- **UI Components**: Radix UI Slot, custom components with CVA
-- **Icons**: Lucide React
-- **Fonts**: Inter Variable font with fallbacks
-- **Utilities**: clsx, tailwind-merge, class-variance-authority
-- **Animations**: tw-animate-css
-- **Package Manager**: PNPM
-- **Build Tool**: Turbopack
+- **Fast Loading**: No unnecessary bloat or heavy frameworks. Every byte serves a purpose.
+- **Accessible**: Clean semantic HTML and proper ARIA labels ensure everyone can navigate your work.
+- **Content-First**: The focus is on showcasing your projects and skills, not distracting visual effects.
+- **Mobile-Optimized**: Responsive design that works beautifully on any device.
+- **SEO-Ready**: Proper meta tags and structured data help your work get discovered.
 
-## 📁 Project Structure
+### What Makes It Minimal
 
-```
-├── app/                    # Next.js App Router
-│   ├── globals.css        # Global styles and design tokens
-│   ├── layout.tsx         # Root layout with metadata
-│   ├── page.tsx           # Home page with sections
-│   ├── loading.tsx        # Loading UI
-│   └── error.tsx          # Error UI
-├── components/            # Reusable components
-│   ├── sections/          # Page sections
-│   │   ├── HeroSection.tsx
-│   │   ├── ProjectsSection.tsx
-│   │   ├── AlmostSection.tsx
-│   │   ├── ContactSection.tsx
-│   │   ├── Section.tsx    # Base section component
-│   │   └── index.ts       # Section exports
-│   ├── ui/               # UI primitives
-│   │   ├── button.tsx
-│   │   └── Loading.tsx
-│   ├── AlmostWorkCard.tsx # Almost work project cards
-│   ├── Navigation.tsx    # Main navigation
-│   ├── ProjectCard.tsx   # Project display cards
-│   └── ErrorBoundary.tsx # Error boundary component
-├── lib/                  # Utilities and configuration
-│   ├── constants.ts      # App constants and configuration
-│   ├── fonts.ts         # Font configuration
-│   ├── utils.ts         # Utility functions
-│   └── dev-utils.ts     # Development utilities
-├── types/               # TypeScript type definitions
-│   └── index.ts
-└── public/             # Static assets
-    ├── fonts/          # Custom fonts
-    ├── images/         # Project images and assets
-    │   └── projects/   # Project-specific images
-    └── *.svg          # Icon assets
-```
+- **Zero External Dependencies**: No Google Fonts or CDN dependencies that slow down loading
+- **Efficient Animations**: Smooth, purposeful animations using Framer Motion
+- **Clean Architecture**: Well-organized components and utilities for easy maintenance
+- **Performance-First**: Built with Next.js 15 and optimized for Core Web Vitals
 
-## 🚀 Getting Started
+This approach ensures your portfolio loads instantly, works everywhere, and puts your work front and center.
 
-### Prerequisites
+## Setup for Your Name
 
-- Node.js 18+
-- PNPM (recommended) or npm/yarn
+Getting started is straightforward. All the customization happens in one main file, making it easy to adapt the portfolio to your personal brand.
 
-### Installation
-
-1. Clone the repository:
+### 1. Clone and Install
 
 ```bash
 git clone <your-repo-url>
 cd minimal-portfolio
-```
-
-2. Install dependencies:
-
-```bash
 pnpm install
 ```
 
-3. Start the development server:
+### 2. Customize Your Information
 
-```bash
-pnpm dev
-```
+Open `lib/constants.ts` and update the following sections:
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 📝 Customization
-
-### 1. Personal Information
-
-Update your personal information in `lib/constants.ts`:
+#### Site Configuration
 
 ```typescript
 export const SITE_CONFIG = {
-	name: 'Your Portfolio',
-	title: 'Professional Portfolio | Your Name',
-	description: 'Your description here',
-	url: 'https://yourportfolio.com',
+	name: 'Your Name',
+	title: 'Your Name - Your Title | Your Expertise',
+	description: 'Your professional description...',
+	url: 'https://yourdomain.com',
+	twitterHandle: '@yourhandle',
 	author: {
 		name: 'Your Name',
-		email: 'your.email@example.com',
+		email: 'your.email@domain.com',
 		github: 'https://github.com/yourusername',
-		linkedin: 'https://linkedin.com/in/yourusername',
+		linkedin: 'https://linkedin.com/in/yourprofile',
+		twitter: 'https://twitter.com/yourhandle',
 	},
 }
 ```
 
-### 2. Portfolio Content
+#### Hero Section
 
-#### Projects
+```typescript
+export const HERO_CONTENT = {
+	name: 'Your Name',
+	description: 'Your professional story and what you do...',
+	clients: ['Client 1', 'Client 2', 'Client 3', 'Client 4'],
+	seo: {
+		jobTitle: 'Your Job Title',
+		expertise: 'Your Main Skills',
+		// ... other SEO fields
+	},
+}
+```
 
-Update your projects in `lib/constants.ts`:
+#### Your Projects
+
+Replace the example projects in the `PROJECTS` array:
 
 ```typescript
 export const PROJECTS = [
 	{
 		id: '1',
-		title: 'Your Project Title',
-		shortDescription: 'Brief description',
+		title: 'Your Project Name',
+		shortDescription: 'Brief project description',
 		role: 'Your Role',
-		mainImage: '/images/projects/your-project/template.jpg',
-		workContent: 'Detailed project description...',
-		imageGallery: [...],
+		mainImage: '/images/projects/your-project/main.jpg',
+		workContent: 'Detailed description of your work...',
+		// ... add your project images
 	},
+	// ... more projects
 ]
 ```
 
-#### Almost Work Showcase
+#### Social Links
 
-Configure your showcase items in `lib/constants.ts`:
+Update your social media profiles:
 
 ```typescript
-export const ALMOST_WORK = [
+export const SOCIAL_LINKS = [
 	{
-		id: '1',
-		title: 'Project Name',
-		image: '/images/projects/almost-work/your-image.jpg',
-		isFullSize: false, // Set to true for full-width display
+		name: 'LinkedIn',
+		url: 'https://linkedin.com/in/yourprofile',
+		// ... other config
 	},
+	// ... other social links
 ]
 ```
 
-#### Page Content
+### 3. Add Your Images
 
-Modify the section content in `app/page.tsx`:
+Replace the template images with your own:
 
-```tsx
-<HeroSection />
-<ProjectsSection />
-<AlmostSection />
-<ContactSection />
+- **Project Images**: Add to `public/images/projects/`
+- **Almost Work**: Add to `public/images/projects/almost-work/`
+- **Favicon**: Replace `app/favicon.ico`
+
+### 4. Update Contact Information
+
+In `app/page.tsx`, update the email and contact section:
+
+```typescript
+<ContactSection
+	email="your.email@domain.com"
+	title="Available for collaborations and experiments."
+	socialLinks={SOCIAL_LINKS}
+/>
 ```
 
-### 3. Styling
-
-- Colors and design tokens: `app/globals.css`
-- Component styles: Individual component files
-- Tailwind configuration: `tailwind.config.js` (if created)
-
-## 🎨 Design System
-
-The project uses a consistent design system with:
-
-- **Typography**: Inter Variable font with multiple weights
-- **Colors**: Modern OKLCH color space with light/dark mode support
-- **Spacing**: Consistent spacing scale
-- **Animations**: Smooth transitions and micro-interactions
-- **Components**: Reusable UI components with variants
-
-## 🧩 Key Components
-
-### AlmostWorkCard
-
-Flexible showcase component supporting two layouts:
-
-- **Regular Cards**: Square aspect ratio for standard items
-- **Full-size Cards**: 2:1 aspect ratio spanning full grid width
-- **Features**: Rounded corners, image optimization, responsive titles
-
-### ProjectCard
-
-Main project display component with:
-
-- Hero image display
-- Project metadata (title, role, description)
-- Responsive design
-
-### Section Components
-
-Modular page sections:
-
-- `HeroSection`: Landing area with introduction
-- `ProjectsSection`: Main portfolio showcase
-- `AlmostSection`: Creative work display with flexible grid
-- `ContactSection`: Contact information and links
-
-## 🔧 Development
-
-### Available Scripts
+### 5. Run and Deploy
 
 ```bash
-pnpm dev          # Start development server with Turbopack
-pnpm build        # Build for production with Turbopack
-pnpm start        # Start production server
-pnpm lint         # Run ESLint (if configured)
+# Development
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
 ```
 
-### Code Quality
+Deploy to Vercel, Netlify, or your preferred hosting platform.
 
-The project follows clean code principles:
+## Tech Stack
 
-- **Separation of Concerns**: Modular components and utilities
-- **Type Safety**: Comprehensive TypeScript usage
-- **Documentation**: JSDoc comments for all functions
-- **Error Handling**: Proper error boundaries and loading states
-- **Accessibility**: WCAG compliant with proper ARIA attributes
-- **Performance**: Optimized fonts, images, and bundle size
+- **Next.js 15** - React framework with App Router
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations
+- **TypeScript** - Type safety
+- **Lucide React** - Clean, consistent icons
 
-## 🚀 Deployment
+## Project Structure
 
-### Vercel (Recommended)
+```
+├── app/                 # Next.js App Router
+├── components/          # Reusable UI components
+│   ├── sections/        # Main page sections
+│   └── ui/             # Base UI components
+├── lib/
+│   ├── constants.ts    # All your customizable content
+│   ├── hooks/          # Custom React hooks
+│   └── utils.ts        # Utility functions
+├── public/             # Static assets
+└── types/              # TypeScript type definitions
+```
 
-1. Push your code to GitHub
-2. Connect your repository to [Vercel](https://vercel.com)
-3. Deploy automatically on every push
+---
 
-### Other Platforms
-
-The project can be deployed to any platform that supports Next.js:
-
-- Netlify
-- AWS Amplify
-- Railway
-- Render
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🔗 Useful Links
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs)
-- [Radix UI Documentation](https://www.radix-ui.com/docs)
+**Ready to showcase your work?** Start by customizing `lib/constants.ts` with your information and replace the template images with your own projects.

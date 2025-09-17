@@ -18,10 +18,6 @@ interface ErrorFallbackProps {
 	resetError: () => void
 }
 
-/**
- * Error boundary component to catch and handle React errors gracefully
- * Provides a fallback UI when component tree encounters an error
- */
 export class ErrorBoundary extends React.Component<
 	ErrorBoundaryProps,
 	ErrorBoundaryState
@@ -39,7 +35,6 @@ export class ErrorBoundary extends React.Component<
 	}
 
 	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-		// Log error to monitoring service in production
 		console.error('ErrorBoundary caught an error:', error, errorInfo)
 	}
 
